@@ -333,7 +333,7 @@ end
 
 if isdefined(Base.Experimental, Symbol("@overlay"))
     using Core.Compiler: OverlayMethodTable
-    get_method_table_view(world::UInt, mt::CC.MethodTable) = OverlayMethodTable(world, mt)
+    get_method_table_view(world::UInt, mt::Core.MethodTable) = OverlayMethodTable(world, mt)
 else
     get_method_table_view(world::UInt, mt::Nothing) = WorldOverlayMethodTable(world)
 end
